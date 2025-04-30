@@ -14,7 +14,7 @@ const SearchBook = () => {
     }
 
     try {
-      const res = await axios.get(`https://book-app-31ms.onrender.com/search?title=${query}`);
+      const res = await axios.get(`https://book-app-td71.onrender.com/search?title=${query}`);
       setBooks(res.data);
     } catch (error) {
       console.error(error);
