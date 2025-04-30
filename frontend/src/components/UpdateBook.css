@@ -1,0 +1,201 @@
+/* .update-book-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .update-book-container h2,
+  .update-book-container h4 {
+    text-align: center;
+  }
+  
+  .book-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .book-list li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-list button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .book-list button:hover {
+    background-color: #0056b3;
+  }
+  
+  .update-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .update-book-form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .update-book-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-book-form button:hover {
+    background-color: #218838;
+  }
+   */
+
+   .update-book-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #fdfdfd, #eaeaea);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeInSlide 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes fadeInSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .update-book-container h2,
+  .update-book-container h4 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 10px;
+    animation: fadeTitle 0.6s ease-in forwards;
+  }
+  
+  @keyframes fadeTitle {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .book-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .book-list li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .book-list li:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-list button {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #007bff, #339bff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  .book-list button:hover {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 86, 179, 0.4);
+  }
+  
+  .update-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 30px;
+    animation: fadeInForm 0.7s ease-in forwards;
+  }
+  
+  @keyframes fadeInForm {
+    from {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .update-book-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .update-book-form input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+    outline: none;
+  }
+  
+  .update-book-form button {
+    padding: 12px;
+    background: linear-gradient(135deg, #28a745, #5cd58c);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  }
+  
+  .update-book-form button:hover {
+    background: linear-gradient(135deg, #218838, #3acb6d);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(33, 136, 56, 0.4);
+  }
+  
