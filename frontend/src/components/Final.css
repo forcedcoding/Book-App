@@ -1,7 +1,23 @@
-/* General Styles */
-body {
+/* ================= Root Variables ================= */
+:root {
+    --primary-color: #3f51b5;
+    --primary-dark: #303f9f;
+    --danger-color: #dc3545;
+    --danger-dark: #c82333;
+    --success-color: #28a745;
+    --success-light: #5cd58c;
+    --info-color: #3498db;
+    --info-dark: #2980b9;
+    --font-color: #2c3e50;
+    --light-gray: #f5f5f5;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* General Styles */
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
+    background-color: var(--light-gray);
     margin: 0;
     padding: 0;
   }
@@ -22,7 +38,7 @@ body {
   .add-book-container h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #3f51b5;
+    color: var(--primary-color);
   }
   
   .add-book-form {
@@ -38,29 +54,29 @@ body {
   
   .add-book-form input {
     padding: 10px;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     border: 1px solid #ccc;
     transition: border-color 0.3s;
   }
   
   .add-book-form input:focus {
-    border-color: #3f51b5;
+    border-color: var(--primary-color);
     outline: none;
   }
   
   .add-book-form button {
     padding: 12px;
-    background: linear-gradient(to right, #3f51b5, #5a69d8);
+    background: linear-gradient(to right, var(--primary-color), #5a69d8);
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
   }
   
   .add-book-form button:hover {
-    background: #303f9f;
+    background: var(--primary-dark);
   }
   
   /* ================= Delete Book ================= */
@@ -76,7 +92,7 @@ body {
   
   .delete-book-container h2 {
     text-align: center;
-    color: #dc3545;
+    color: var(--danger-color);
   }
   
   .book-list {
@@ -89,11 +105,11 @@ body {
     background: #fff;
     margin: 10px 0;
     padding: 12px 15px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--box-shadow);
     transition: transform 0.2s;
   }
   
@@ -103,17 +119,17 @@ body {
   
   .book-list button {
     padding: 6px 12px;
-    background-color: #dc3545;
+    background-color: var(--danger-color);
     color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .book-list button:hover {
-    background-color: #c82333;
+    background-color: var(--danger-dark);
   }
   
   /* ================= Update Book ================= */
@@ -143,23 +159,23 @@ body {
   
   .update-book-form input {
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: 1px solid #ccc;
     transition: box-shadow 0.3s ease;
   }
   
   .update-book-form input:focus {
-    border-color: #28a745;
+    border-color: var(--success-color);
     box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
     outline: none;
   }
   
   .update-book-form button {
     padding: 12px;
-    background: linear-gradient(135deg, #28a745, #5cd58c);
+    background: linear-gradient(135deg, var(--success-color), var(--success-light));
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -179,16 +195,18 @@ body {
   
   .search-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     margin-bottom: 30px;
   }
   
   .search-box input {
     padding: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 16px;
     transition: box-shadow 0.3s;
   }
@@ -200,17 +218,17 @@ body {
   
   .search-box button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: var(--info-color);
     border: none;
     color: white;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
   }
   
   .search-box button:hover {
-    background-color: #2980b9;
+    background-color: var(--info-dark);
   }
   
   .results-grid {
@@ -227,7 +245,7 @@ body {
     padding: 15px;
     text-align: center;
     background-color: #fefefe;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: var(--box-shadow);
     transition: transform 0.3s ease;
   }
   
@@ -245,7 +263,7 @@ body {
   .book-card h3 {
     margin-top: 10px;
     font-size: 18px;
-    color: #2c3e50;
+    color: var(--font-color);
   }
   
   .book-card p {
@@ -271,7 +289,7 @@ body {
   
   .view-book-container h1 {
     text-align: center;
-    color: #2c3e50;
+    color: var(--font-color);
     margin-bottom: 40px;
     font-size: 2.5rem;
     animation: fadeSlideIn 0.7s ease forwards;
@@ -318,16 +336,14 @@ body {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   }
   
-  .book-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.4s ease;
-  }
-  
   .book-card:hover img {
     transform: scale(1.05);
+  }
+  
+  .book-card img {
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
   }
   
   .book-card h3 {
@@ -376,6 +392,48 @@ body {
     to {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+  
+  /* ================ Responsive Design ================ */
+  @media (max-width: 768px) {
+    .add-book-container,
+    .update-book-container,
+    .delete-book-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .book-card {
+      width: 90%;
+    }
+  
+    .book-grid {
+      gap: 15px;
+    }
+  
+    .view-book-container h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-box {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .search-box input,
+    .search-box button {
+      width: 100%;
+    }
+  
+    .book-card img {
+      height: 200px;
+    }
+  
+    .book-card {
+      padding: 12px;
     }
   }
   
